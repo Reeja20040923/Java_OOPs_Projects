@@ -1,0 +1,47 @@
+package inheritancedemo.vehicle;
+//super class
+public class Vehicle {
+	int speed;
+	int fuelcapacity;
+	
+	void start() {
+		System.out.println("Vehicle is starting");
+	}
+	
+	void stop() {
+		System.out.println("Vehicle stopped");
+	}
+
+}
+//subclass 1
+public class Car extends Vehicle{
+	boolean hasAirConditioning;
+	
+	void turnOnAC() {
+		System.out.println("Air Conditioning is On");
+	}
+	
+
+}
+//subclass 2
+public class MotorCycle extends Vehicle {
+	boolean hasSideCar;
+	
+	void doWheelie() {
+		System.out.println("MotorCycle is doing a Wheelie");
+	}
+
+}
+//main method 
+public class Main {
+	public static void main(String args[]) {
+		Car car = new Car();
+		car.start();
+		car.turnOnAC();
+		
+		MotorCycle motorcycle = new MotorCycle();
+		motorcycle.start();
+		motorcycle.doWheelie();
+	}
+
+}
