@@ -1,0 +1,37 @@
+package polymorphismdemo.animal;
+
+public class Animal {
+	public void sound() {
+		System.out.println("Animal makes a sound");
+	}
+
+}
+
+class Dog extends Animal{
+	@override
+	public void sound() {
+		System.out.println("Dog barks");
+	}
+}
+
+class Cat extends Animal{
+	@override
+	public void sound() {
+		System.out.println("Cat Meows");
+	}
+}
+
+public class OverridingPolymorphism{
+	public static void makingAnimalSound(Animal animal) {
+		animal.sound();
+	}
+	
+	public static void main(String[] args) {
+		Animal animal = new Animal();
+		Animal dog = new Dog();
+		Animal cat = new Cat();
+		
+		makingAnimalSound(dog);
+		makingAnimalSound(cat);
+	}
+}
